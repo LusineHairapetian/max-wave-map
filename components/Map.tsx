@@ -9,8 +9,12 @@ export interface MarkersStateProperties {
     latitude: number;
 }
 
-export default function (props: any) {
-    const geojson = useMemo((): FeatureCollection => {
+export type InteractiveMapProps = {
+    getClickCoordinates: (coordinates: MarkersStateProperties) => void
+}
+
+export default function InteractiveMap(props: InteractiveMapProps) {
+    const geojson = useMemo((): any => {
         const geoJson = {
             type: 'FeatureCollection',
             features: [{

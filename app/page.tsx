@@ -37,7 +37,7 @@ export default function Home() {
         </div>
         <div className="p-5 border leading-4 text-sm overflow-y-auto">
           <h6 className="font-bold">Listing the waves</h6><br/>
-          {clickData.length && clickData.map(({longitude, latitude, maxWave}, i) => <p className="text-xs bg-slate-100 mb-1">
+          {clickData.length && clickData.map(({longitude, latitude, maxWave}, i) => <p key={i} className="text-xs bg-slate-100 mb-1">
             {i+1}. On [{longitude},{latitude}] highest wave was around {maxWave} meters
           </p>)}
         </div>
