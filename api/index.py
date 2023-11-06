@@ -1,11 +1,10 @@
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
 import xarray as xr
 import numpy as np
 
 app = FastAPI()
 
-@app.get("/api/getData")
+@app.get("/api/get_data")
 def getTheHighestWave(longitude: str, latitude: str):
   wavesData = xr.open_dataset("api/waves_2019-01-01.nc")
   wavesOnPoint = wavesData.interp(longitude=float(longitude), latitude=float(latitude))

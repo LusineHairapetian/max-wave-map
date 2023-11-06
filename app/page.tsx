@@ -18,7 +18,7 @@ export default function Home() {
       longitude: longitude.toString(), 
       latitude: latitude.toString()
     };
-    const response = await fetch(`/api/getData?${new URLSearchParams(coordinatesStringified)}`);
+    const response = await fetch(`/api/get_data?${new URLSearchParams(coordinatesStringified)}`);
     const maxWave = await response.json();
     setClickData([...clickData, {longitude, latitude, maxWave}])
   }
