@@ -2,5 +2,5 @@ fastapi==0.100.1
 uvicorn[standard]==0.23.2
 xarray==2023.10.1
 numpy==1.24.3
-nedcdf4==1.6.5
+netCDF4==1.6.5
 scipy==1.11.3
